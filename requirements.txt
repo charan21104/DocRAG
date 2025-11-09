@@ -1,12 +1,18 @@
 streamlit==1.33.0
 pypdf==4.2.0
 python-dotenv==1.0.1
-faiss-cpu==1.8.0
-# Add the Google GenAI library
+
+# Let Streamlit choose the best version of faiss-cpu for its servers
+faiss-cpu
+
+# The core Google AI library (this was missing)
+google-generativeai
+
+# The LangChain wrapper for Google AI
 langchain-google-genai
-# We still need sentence-transformers for the free embeddings
+
+# The rest of our stable, version-locked libraries
 sentence-transformers==2.7.0
-# Keep the stable LangChain stack
 langchain==0.1.17
 langchain-core==0.1.52
 langchain-community==0.0.38
